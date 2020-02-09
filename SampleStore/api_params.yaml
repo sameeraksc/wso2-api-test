@@ -2,11 +2,11 @@ environments:
   - name: dev
     endpoints:
       production:
-        url: http://dev.101digital.com:9090/samplestoree
+        url: http://dev.101digital.com:9090/samplestoree6
         config:
           retryTimeOut: 60
       sandbox:
-        url: http://dev.sandbox.101digital.com:9090/samplestoree
+        url: http://dev.sandbox.101digital.com:9090/samplestoree6
         config:
           retryTimeOut: 60        
   - name: prod
@@ -16,6 +16,6 @@ environments:
         config:
           retryTimeOut: 60      
       sandbox:
-        url: http://prod.sandbox.101digital.com:9090/samplestoree
+        url: http://prod.sandbox.101digital.com:9090/samplestoree6
         config:
           retryTimeOut: 60      
