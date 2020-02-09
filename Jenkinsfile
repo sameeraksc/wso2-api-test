@@ -40,9 +40,9 @@ pipeline {
                 echo 'Deploying to Production'
                 sh 'apimcli import-api -f $API_DIR -e $PROD_ENV -k --preserve-provider=false --update --verbose'
             }
-        } 
+        } */
     }
-    post {
+   /* post {
         cleanup {
             deleteDir()
             dir("${workspace}@tmp") {
@@ -52,5 +52,5 @@ pipeline {
                 deleteDir()
             }
         }
-    } */
+    } /*
 }
