@@ -19,6 +19,7 @@ pipeline {
 				sudo su - ec2-user <<EOF
 				apimcli login dev -u admin -p admin -k
 				sleep 5
+				cd $WORKSPACE
 				apimcli import-api -f $API_DIR -e $DEV_ENV -k --preserve-provider=false --update --verbose
 				EOF
 				""".stripIndent()
