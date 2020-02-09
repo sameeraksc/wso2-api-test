@@ -36,10 +36,10 @@ pipeline {
             steps {
                 sh 'echo "Logging into $PROD_ENV"'
                 withCredentials([usernamePassword(credentialsId: 'apim_prod', usernameVariable: 'PROD_USERNAME', passwordVariable: 'PROD_PASSWORD')]) {
-                    sh 'apimcli login $PROD_ENV -u $PROD_USERNAME -p $PROD_PASSWORD -k'                        
+                    sh 'apimcli login $PROD_ENV -u $PROD_USERNAME -p $PROD_PASSWORD -k'    
+					echo 'Deploying to Production'
+					sh 'apimcli import-api -f $API_DIR -e $PROD_ENV -k --preserve-provider=false --update --verbose'                    
                 }
-                echo 'Deploying to Production'
-                sh 'apimcli import-api -f $API_DIR -e $PROD_ENV -k --preserve-provider=false --update --verbose'
             }
         } */
     }
