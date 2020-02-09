@@ -1,7 +1,7 @@
 id:
   providerName: admin
   apiName: SampleStore7
-  version: 1.0.8
+  version: 1.0.7
 uuid: c318b6ad-2993-4c67-801d-b2c27c151ab2
 description: This is a sample server online store
 type: HTTP
