@@ -1,11 +1,11 @@
 id:
   providerName: admin
-  apiName: alibaba6
-  version: 1.0.6
+  apiName: alibaba7
+  version: 1.0.7
 uuid: c318b6ad-2993-4c67-801d-b2c27c151ab2
 description: This is a sample server online store
 type: HTTP
-context: /alibaba6/1.0.6
+context: /alibaba7/1.0.7
 contextTemplate: /SampleStore/{version}
 tags: []
 documents: []
