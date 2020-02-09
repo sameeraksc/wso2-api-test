@@ -43,4 +43,15 @@ pipeline {
             }
         } */
     }
+	    post {
+        cleanup {
+            deleteDir()
+            dir("${workspace}@tmp") {
+                deleteDir()
+            }
+            dir("${workspace}@script") {
+                deleteDir()
+            }
+        }
+    }
 }
