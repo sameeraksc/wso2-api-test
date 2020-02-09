@@ -16,7 +16,7 @@ pipeline {
             steps {
                 echo 'Logging into $DEV_ENV'
                 withCredentials([usernamePassword(credentialsId: 'apim_dev', usernameVariable: 'DEV_USERNAME', passwordVariable: 'DEV_PASSWORD')]) {
-                    sh 'apimctl login $DEV_ENV -u $DEV_USERNAME -p $DEV_PASSWORD -k'                        
+                    sh 'apimcli login $DEV_ENV -u $DEV_USERNAME -p $DEV_PASSWORD -k'                        
                 }
                 echo 'Deploying to $DEV_ENV'
                 sh 'apimcli import-api -f $API_DIR -e $DEV_ENV -k --preserve-provider=false --update --verbose'
@@ -35,7 +35,7 @@ pipeline {
             steps {
                 sh 'echo "Logging into $PROD_ENV"'
                 withCredentials([usernamePassword(credentialsId: 'apim_prod', usernameVariable: 'PROD_USERNAME', passwordVariable: 'PROD_PASSWORD')]) {
-                    sh 'apimctl login $PROD_ENV -u $PROD_USERNAME -p $PROD_PASSWORD -k'                        
+                    sh 'apimcli login $PROD_ENV -u $PROD_USERNAME -p $PROD_PASSWORD -k'                        
                 }
                 echo 'Deploying to Production'
                 sh 'apimcli import-api -f $API_DIR -e $PROD_ENV -k --preserve-provider=false --update --verbose'
