@@ -21,7 +21,7 @@ pipeline {
                         --admin https://localhost:9443/api/am/admin/v0.14 \
                         --api_list https://wso2apim.101digital.io/api/am/publisher/v0.14/apis \
                         --app_list  https://wso2apim.101digital.io/api/am/store/v0.14/applications
-						EOF
+				EOF
 						""".stripIndent()
       		}
 			
