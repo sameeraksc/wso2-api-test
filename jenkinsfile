@@ -22,12 +22,12 @@ pipeline {
                 sh 'apimcli import-api -f $API_DIR -e $DEV_ENV -k --preserve-provider=false --update --verbose'
             }
         }
-        stage('Run Tests') {
+        /* stage('Run Tests') {
             steps {
                 echo 'Running tests in $DEV_ENV'
                 sh 'newman run $API_DIR/$TEST_SCRIPT_FILE --insecure' 
             }
-        }
+        } 
         stage('Deploy to Production') {
             environment{
                 RETRY = '60'
@@ -40,7 +40,7 @@ pipeline {
                 echo 'Deploying to Production'
                 sh 'apimcli import-api -f $API_DIR -e $PROD_ENV -k --preserve-provider=false --update --verbose'
             }
-        }
+        } */
     }
     post {
         cleanup {
