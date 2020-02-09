@@ -20,7 +20,7 @@ pipeline {
                         --import-export  https://wso2apim.101digital.io/api-import-export-2.6.0-v14 \
                         --admin https://localhost:9443/api/am/admin/v0.14 \
                         --api_list https://wso2apim.101digital.io/api/am/publisher/v0.14/apis \
-                        --app_list  https://wso2apim.101digital.io/api/am/store/v0.14/applications
+                        --app_list  https://wso2apim.101digital.io/api/am/store/v0.14/applications || true
 				EOF
 						""".stripIndent()
       		}
