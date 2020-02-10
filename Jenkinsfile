@@ -11,9 +11,9 @@ pipeline {
 	
 		stage('setup ENV') {
 			steps{
-				sh """
-				sudo su - ec2-user <<EOF
-				apimcli add-env -n dev \
+			  sh """
+			  sudo su - ec2-user <<EOF
+		          apimcli add-env -n dev \
                         --registration https://wso2apim.101digital.io/client-registration/v0.14/register \
                         --apim https://wso2apim.101digital.io \
                         --token https://wso2apim-is.101digital.io/oauth2/token \
