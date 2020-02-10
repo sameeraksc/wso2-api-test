@@ -1,6 +1,5 @@
 pipeline {
     agent any
-    tools {nodejs "Node"}
     environment {
         CI = 'true'
         API_DIR = './SampleStore'
