@@ -1,11 +1,11 @@
 id:
   providerName: admin
-  apiName: 101test5
+  apiName: 101test6
   version: 1.0.3
 description: This is a sample server online store
 type: HTTP
-context: /101test5/1.0.3
-contextTemplate: /101test5/{version}
+context: /101test6/1.0.3
+contextTemplate: /101test6/{version}
 tags: []
 documents: []
 lastUpdated: Dec 12, 2019 11:12:13 PM
