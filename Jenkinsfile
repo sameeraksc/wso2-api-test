@@ -1,7 +1,7 @@
 pipeline {
     agent {
-		label {
-				label "ubuntu-slave1"
+	label {
+		label "ubuntu-slave1"
 		}
 	}
     environment {
