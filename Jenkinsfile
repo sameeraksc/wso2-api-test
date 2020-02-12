@@ -19,20 +19,7 @@ pipeline {
                     sh 'apimcli login $DEV_ENV -u $DEV_USERNAME -p $DEV_PASSWORD -k'                        
                 }
                 echo 'Deploying to $DEV_ENV'
-                sh '''
-				exitcode=1
-				count=0
-				until [ $exitcode -eq 0 ]
-				do
-					apimcli import-api -f ./SampleStore -e dev -k --preserve-provider=false --update --verbose
-					exitcode=$(echo "$?")
-					((count++))
-					if [[ "$count" == '6' ]]; then
-					  break
-					fi
-				done
-				'''
-
+                sh 'apimcli import-api -f $API_DIR -e $DEV_ENV -k --preserve-provider=false --update --verbose'
             }
         }
 
