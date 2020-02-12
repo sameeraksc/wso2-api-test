@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent ubuntu-slave1
     environment {
         CI = 'true'
         API_DIR = './SampleStore'
