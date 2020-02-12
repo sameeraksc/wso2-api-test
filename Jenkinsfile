@@ -19,7 +19,7 @@ pipeline {
                     sh 'apimcli login $DEV_ENV -u $DEV_USERNAME -p $DEV_PASSWORD -k'                        
                 }
                 echo 'Deploying to $DEV_ENV'
-                sh """
+                sh '''
 				exitcode=1
 				count=0
 				until [ $exitcode -eq 0 ]
@@ -31,7 +31,7 @@ pipeline {
 					  break
 					fi
 				done
-				"""
+				'''
 
             }
         }
