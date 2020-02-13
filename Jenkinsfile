@@ -1,9 +1,7 @@
 pipeline {
-    agent {
-	label {
-		label "ubuntu-slave1"
-		}
-	}
+
+    agent any
+	
     environment {
         CI = 'true'
         API_DIR = './SampleStore'
