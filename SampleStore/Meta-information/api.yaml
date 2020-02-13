@@ -1,12 +1,12 @@
 id:
   providerName: admin
-  apiName: 101digitalStore100
-  version: 1.0.0
+  apiName: 101digitalStore102
+  version: 1.0.2
 uuid: c318b6ad-2993-4c67-801d-b2c27c151ab2
 description: This is a sample server online store
 type: HTTP
-context: /101digitalStore100/1.0.0 
-contextTemplate: /101digitalStore/{version}
+context: /101digitalStore102/1.0.2
+contextTemplate: /101digitalStore102/{version}
 tags: []
 documents: []
 lastUpdated: Dec 12, 2019 11:12:13 PM
